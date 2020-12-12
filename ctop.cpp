@@ -1,11 +1,14 @@
 //In this Project, I will translate c++ to python...
 #include "headers.h"
+
 int main() {
 
  // Gather name of file from which data will be read from
     cout << "Enter the name of the file: " ;
     string file_name = "sample/c1.txt";
    //getline(cin, file_name);
+   
+   vector<Word> word_list;
     
     // Create file variable to associate with disk file
     ifstream input_data;
@@ -20,37 +23,30 @@ int main() {
         }
     
         // Define vector that will hold all text on file
-        vector<string> new_data;
+        vector<char> new_data;
         string temp;
     
         // while the text from the user inputted file remains of type string then it will be placed into the new_data vector line by line
-        while (getline(input_data,temp)) {
-            new_data.push_back(temp);
-        }
+        if(readfile(file_name, word_list)){
+			cout << "success read" <<endl;
+		}
     // Close file
     input_data.close();
-    for(vector<string>::iterator it = new_data.begin(); it != new_data.end();++it){
-		
-	   cout << endl <<*it;
+
+   for(int i = 0 ; i < (int)word_list.size(); i++){
+	   cout << word_list[i].asc; 
    }
+   
    cout <<endl;
    
-   
    //Function Space...
-   vector<int> numbers;
-   numbers.push_back(1);
-   numbers.push_back(0);
-   numbers.push_back(1);
-   numbers.push_back(6);
    
-   for(int i = 0 ; i < (int)numbers.size(); i++){
-	   cout << numbers[i] <<endl;
-   }
-   
-   
-   //cout << test_func(5) <<endl;
-
-
+ 
+ 
+ 
+ 
+ 
+ /*
 
     // Create ofstream object to write to a new file
     ofstream output_data;
@@ -69,10 +65,13 @@ int main() {
 		output_data << *it << endl;
 	}
 		
-    
     // Close loop
     output_data.close();
 
-    
+
+*/
     return 0;
 }
+
+
+
