@@ -1,6 +1,5 @@
 //In this Project, I will translate c++ to python...
 #include "headers.h"
-using namespace std;
 int main() {
 
  // Gather name of file from which data will be read from
@@ -49,26 +48,10 @@ int main() {
    }
    
    
-   cout << test_func(5) <<endl;
+   //cout << test_func(5) <<endl;
 
 
 
-   
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-    
-   
     // Create ofstream object to write to a new file
     ofstream output_data;
     
