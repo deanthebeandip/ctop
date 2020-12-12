@@ -1,11 +1,6 @@
 //In this Project, I will translate c++ to python...
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-
+#include "headers.h"
 using namespace std;
-
 int main() {
 
  // Gather name of file from which data will be read from
@@ -43,6 +38,27 @@ int main() {
    
    
    //Function Space...
+   vector<int> numbers;
+   numbers.push_back(1);
+   numbers.push_back(0);
+   numbers.push_back(1);
+   numbers.push_back(6);
+   
+   for(int i = 0 ; i < (int)numbers.size(); i++){
+	   cout << numbers[i] <<endl;
+   }
+   
+   
+   cout << test_func(5) <<endl;
+
+
+
+   
+   
+    
+    
+    
+    
     
     
     
